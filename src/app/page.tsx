@@ -5,6 +5,7 @@ import EQvsIQ from "./components/EQvsIQ/EQvsIQ";
 import DoesThisSoundsFamiliar from "./components/DoesThisSoundsFamiliar/DoesThisSoundsFamiliar";
 import MeetAheadApp from "./components/MeetAheadApp/MeetAheadApp";
 import SelfImprovement from "./components/SelfImprovement/SelfImprovement";
+import BestYouWithEQ from "./components/BestYouWithEQ/BestYouWithEQ";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <DoesThisSoundsFamiliar />
       <MeetAheadApp />
       <SelfImprovement />
+      <BestYouWithEQ />
     </div>
   );
 }
