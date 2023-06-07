@@ -2,7 +2,7 @@ import React from "react";
 
 const SelfImprovement = () => {
   return (
-    <section className="mt-10 mb-10   h-[500px]  px-8 py-20">
+    <section className="mt-10   px-8 py-20">
       <div className="mb-12">
         <p className="font-semibold">
           Wrong with self improvement & how are we fixing it
