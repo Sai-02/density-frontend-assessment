@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 const Hero = () => {
   return (
-    <section className="mt-20 rounded-2xl bg-[#f4ecff] h-[90vh]  py-4 px-8 ">
+    <section className="mt-[64px] rounded-2xl bg-[#f4ecff] h-[90vh]  py-4 px-8 ">
       <div className="grid  grid-cols-2 gap-4 h-full items-center">
         <div className="flex flex-col gap-2">
           <p className="font-normal">Ahead App</p>
