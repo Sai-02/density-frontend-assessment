@@ -10,6 +10,7 @@ import OthersThinkOfYou from "./components/OthersThinkOfYou/OthersThinkOfYou";
 import Privacy from "./components/Privacy/Privacy";
 import WorkWithUs from "./components/WorkWithUs/WorkWithUs";
 import OpenVacancies from "./components/OpenVacancies/OpenVacancies";
+import Footer from "./components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
       <Privacy />
       <WorkWithUs />
       <OpenVacancies />
+      <Footer />
     </div>
   );
 }
