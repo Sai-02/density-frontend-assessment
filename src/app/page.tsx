@@ -7,6 +7,7 @@ import MeetAheadApp from "./components/MeetAheadApp/MeetAheadApp";
 import SelfImprovement from "./components/SelfImprovement/SelfImprovement";
 import BestYouWithEQ from "./components/BestYouWithEQ/BestYouWithEQ";
 import OthersThinkOfYou from "./components/OthersThinkOfYou/OthersThinkOfYou";
+import Privacy from "./components/Privacy/Privacy";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <SelfImprovement />
       <BestYouWithEQ />
       <OthersThinkOfYou />
+      <Privacy />
     </div>
   );
 }
