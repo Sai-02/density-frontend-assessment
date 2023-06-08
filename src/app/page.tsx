@@ -8,6 +8,7 @@ import SelfImprovement from "./components/SelfImprovement/SelfImprovement";
 import BestYouWithEQ from "./components/BestYouWithEQ/BestYouWithEQ";
 import OthersThinkOfYou from "./components/OthersThinkOfYou/OthersThinkOfYou";
 import Privacy from "./components/Privacy/Privacy";
+import WorkWithUs from "./components/WorkWithUs/WorkWithUs";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <BestYouWithEQ />
       <OthersThinkOfYou />
       <Privacy />
+      <WorkWithUs />
     </div>
   );
 }
