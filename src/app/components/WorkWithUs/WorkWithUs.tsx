@@ -1,12 +1,36 @@
+"use client";
+import { motion } from "framer-motion";
 import React from "react";
 
 const WorkWithUs = () => {
   return (
     <section className="mt-16 rounded-2xl bg-violet-100 p-12 px-16">
       <div className="flex  justify-between items-center text-3xl font-bold">
-        <span className="">Work with us</span>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            visible: { opacity: 1, scale: 1, x: 0, y: 0 },
+            hidden: { opacity: 0, scale: 0.5, x: "-50%" },
+          }}
+        >
+          <span className="">Work with us</span>
+        </motion.div>
 
-        <span className="text-violet-800">ahead</span>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            visible: { opacity: 1, scale: 1, x: 0, y: 0 },
+            hidden: { opacity: 0, scale: 0.5, x: "50%" },
+          }}
+        >
+          <span className="text-violet-800">ahead</span>
+        </motion.div>
       </div>
       <div className="mt-12 flex gap-20 overflow-hidden">
         <div className="grow">
