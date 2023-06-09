@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 
@@ -5,23 +7,56 @@ const MeetAheadApp = () => {
   return (
     <section className="mt-10 mb-10  rounded-3xl h-[500px] bg-orange-50 px-8 py-20">
       <div className="mb-12">
-        <p className="font-semibold">Built out of frustation</p>
-        <h1 className="text-[2.5rem] font-bold">Meet the ahead team</h1>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          variants={{
+            visible: { opacity: 1, scale: 1, y: 0 },
+            hidden: { opacity: 0, scale: 0, y: "100%", x: 0 },
+          }}
+        >
+          <p className="font-semibold">Built out of frustation</p>
+          <h1 className="text-[2.5rem] font-bold">Meet the ahead team</h1>
+        </motion.div>
       </div>
       <div className="grid grid-cols-2 gap-6 px-8">
         <div className="grid place-items-center">
-          <Image src={"/MeetVirtual.png"} alt="d" width={300} height={300} />
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            variants={{
+              visible: { opacity: 1, scale: 1, x: 0, y: 0 },
+              hidden: { opacity: 0, scale: 0, x: "-50%", y: 0 },
+            }}
+          >
+            <Image src={"/MeetVirtual.png"} alt="d" width={300} height={300} />
+          </motion.div>
         </div>
         <div className="grid  place-items-center text-gray-600 font-semibold">
-          <p className="">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Consectetur dolorem architecto aperiam iusto maiores nostrum odio.
-          </p>
-          <p className="">
-            Animi iste, perspiciatis porro distinctio est atque, et rem harum
-            delectus architecto consectetur optio explicabo molestiae
-            blanditiis! Doloremque, officiis.
-          </p>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            variants={{
+              visible: { opacity: 1, scale: 1, x: 0, y: 0 },
+              hidden: { opacity: 0, scale: 0, x: "50%", y: 0 },
+            }}
+          >
+            <p className="">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Consectetur dolorem architecto aperiam iusto maiores nostrum odio.
+            </p>
+            <p className="">
+              Animi iste, perspiciatis porro distinctio est atque, et rem harum
+              delectus architecto consectetur optio explicabo molestiae
+              blanditiis! Doloremque, officiis.
+            </p>
+          </motion.div>
         </div>
       </div>
     </section>
