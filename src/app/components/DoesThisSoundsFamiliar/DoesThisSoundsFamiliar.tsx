@@ -1,11 +1,51 @@
-import React from "react";
+"use client";
+import { motion } from "framer-motion";
+import React, { useState, useEffect, useRef } from "react";
 
 const DoesThisSoundsFamiliar = () => {
+  const [isIntersecting, setIsIntersecting] = useState(false);
+  const ref: any = useRef();
+  const boxContainerRef: any = useRef();
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsIntersecting(entry.isIntersecting);
+      },
+      { rootMargin: "-300px" }
+    );
+    observer.observe(ref?.current);
+    return () => observer.disconnect();
+  }, [isIntersecting]);
+
+  useEffect(() => {
+    if (isIntersecting) {
+      boxContainerRef.current.scrollBy({
+        top: 0,
+        left: +500,
+        behavior: "smooth",
+      });
+    } else {
+    }
+  }, [isIntersecting]);
   return (
-    <section className="overflow-x-hidden p-4">
-      <h1 className="text-2xl font-bold px-4">Does this sound familiar...</h1>
-      <div className="mt-10 flex gap-7 items-center overflow-x-auto hide-scrollbar">
-        <div className="rounded-xl bg-purple-200 w-[350px]  p-6 flex flex-col gap-4 shrink-0">
+    <section className="overflow-x-hidden p-4 " ref={ref}>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
+        variants={{
+          visible: { opacity: 1, scale: 1, y: 0, x: 0 },
+          hidden: { opacity: 0, scale: 0, x: "-50%" },
+        }}
+      >
+        <h1 className="text-2xl font-bold px-4">Does this sound familiar...</h1>
+      </motion.div>
+      <div
+        className=" mt-10 flex gap-7 items-center overflow-x-auto hide-scrollbar"
+        ref={boxContainerRef}
+      >
+        <div className=" ease-linear rounded-xl bg-purple-200 w-[350px]  p-6 flex flex-col gap-4 shrink-0">
           <p className="text-[2.4rem]">😠</p>
           <h3 className="font-bold text-lg">You argue with a colleague</h3>
           <p className="text-gray-700">
@@ -53,6 +93,15 @@ const DoesThisSoundsFamiliar = () => {
           <p className="text-gray-700">
             You get fruzzeled, nervous and frustated instead of staying
             optmisitic and solution-oriented.
+          </p>
+        </div>
+
+        <div className="rounded-xl bg-purple-200 w-[350px]  p-6 flex flex-col gap-4 shrink-0">
+          <p className="text-[2.4rem]">😠</p>
+          <h3 className="font-bold text-lg">You argue with a colleague</h3>
+          <p className="text-gray-700">
+            You get angry and defensive,instead of staying open and working
+            towards common ground
           </p>
         </div>
       </div>
