@@ -18,6 +18,7 @@ const OpenVacancies = () => {
                 visible: { opacity: 1, scale: 1, x: 0, y: 0 },
                 hidden: { opacity: 0, scale: 0.5 },
               }}
+              key={index}
             >
               <div className="rounded-lg bg-yellow-50 p-6 px-10">
                 <h2 className="text-xl font-semibold">

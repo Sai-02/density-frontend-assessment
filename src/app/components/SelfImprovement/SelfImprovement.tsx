@@ -24,7 +24,7 @@ const SelfImprovement = () => {
       </div>
       <div className="px-36">
         <div className="border-l-2 border-l-violet-300  px-16 flex  flex-col gap-6">
-          {[...Array(4)].map(() => {
+          {[...Array(4)].map((val,index) => {
             return (
               <motion.div
                 initial="hidden"
@@ -35,6 +35,7 @@ const SelfImprovement = () => {
                   visible: { opacity: 1, scale: 1, y: 0 },
                   hidden: { opacity: 0, scale: 0, y: "100%", x: 0 },
                 }}
+                key={index}
               >
                 <div className="max-w-[40rem]">
                   <p className="font-bold">It's not easy as 1-2-3</p>
