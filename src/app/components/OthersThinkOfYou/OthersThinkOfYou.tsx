@@ -1,15 +1,28 @@
+"use client";
+import { motion } from "framer-motion";
 import React from "react";
 
 const OthersThinkOfYou = () => {
   return (
     <section className="mt-10 rounded-3xl bg-blue-50 p-10">
-      <h3 className="text-center text-gray-600 text-lg">
-        Let your friends, family, and co-worker (anonymously) rate your social
-        skills
-      </h3>
-      <h1 className="text-[2.4rem] font-bold text-center mt-4">
-        Ever wondered what others think of you?
-      </h1>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        variants={{
+          visible: { opacity: 1, scale: 1, x: 0, y: 0 },
+          hidden: { opacity: 0, scale: 0.5 },
+        }}
+      >
+        <h3 className="text-center text-gray-600 text-lg">
+          Let your friends, family, and co-worker (anonymously) rate your social
+          skills
+        </h3>
+        <h1 className="text-[2.4rem] font-bold text-center mt-4">
+          Ever wondered what others think of you?
+        </h1>
+      </motion.div>
       <div className="mt-8 flex justify-center relative">
         <div className="absolute top-[1.25rem] w-[792px] border-t border-yellow-700 h-4 border-dashed">
           .
@@ -56,24 +69,68 @@ const OthersThinkOfYou = () => {
         <div className="mt-16 shadow bg-white rounded-xl w-[50rem] p-6 py-24 relative">
           <div className="flex justify-between ">
             <div className="h-4 w-4 rounded-full bg-violet-600 z-10 relative">
-              <div className="absolute text-white p-2 bg-violet-600 rounded top-[-3rem] left-[-3rem]">
-                You
-              </div>
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                variants={{
+                  visible: { opacity: 1, scale: 1, x: 0, y: 0 },
+                  hidden: { opacity: 0, scale: 0.5 },
+                }}
+              >
+                <div className="absolute text-white p-2 bg-violet-600 rounded top-[-3rem] left-[-3rem]">
+                  You
+                </div>
+              </motion.div>
             </div>
             <div className="h-4 w-4 rounded-full bg-blue-400 z-10 relative">
-              <div className="absolute   text-white p-3 bg-blue-400 rounded top-[2rem] left-[82%]">
-                Anonymous&nbsp;1
-              </div>
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                variants={{
+                  visible: { opacity: 1, scale: 1, x: 0, y: 0 },
+                  hidden: { opacity: 0, scale: 0.5 },
+                }}
+              >
+                <div className="absolute   text-white p-3 bg-blue-400 rounded top-[2rem] left-[82%]">
+                  Anonymous&nbsp;1
+                </div>
+              </motion.div>
             </div>
             <div className="h-4 w-4 rounded-full bg-orange-400 z-10 relative">
-              <div className="absolute text-white p-2 bg-orange-400 rounded top-[-3rem] left-[0.5rem]">
-                Anonymous&nbsp;2
-              </div>
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                variants={{
+                  visible: { opacity: 1, scale: 1, x: 0, y: 0 },
+                  hidden: { opacity: 0, scale: 0.5 },
+                }}
+              >
+                <div className="absolute text-white p-2 bg-orange-400 rounded top-[-3rem] left-[0.5rem]">
+                  Anonymous&nbsp;2
+                </div>
+              </motion.div>
             </div>
             <div className="h-4 w-4 rounded-full bg-green-400 z-10 relative">
-              <div className="absolute   text-white p-3 bg-green-400 rounded  top-[2rem] left-[82%]">
-                Anonymous&nbsp;3
-              </div>
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                variants={{
+                  visible: { opacity: 1, scale: 1, x: 0, y: 0 },
+                  hidden: { opacity: 0, scale: 0.5 },
+                }}
+              >
+                <div className="absolute   text-white p-3 bg-green-400 rounded  top-[2rem] left-[82%]">
+                  Anonymous&nbsp;3
+                </div>
+              </motion.div>
             </div>
           </div>
           <div className="border-t border-yellow-700 h-1 absolute top-[50%]  w-[752px]"></div>
